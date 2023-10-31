@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:proj3k/screen/login.dart';
 import 'package:proj3k/screen/register.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -32,7 +33,10 @@ class MyApp extends StatelessWidget {
               // ปุ่มเข้าสู่ระบบ
               ElevatedButton(
                 onPressed: () {
-                  // โค้ดสำหรับการเข้าสู่ระบบ
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => login()),
+                  );
                 },
                 child: Text('เข้าสู่ระบบ'),
               ),
